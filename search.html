@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пошук</title>
+</head>
+<body>
+
+<h1>Пошук автомобіля</h1>
+
+<form action="https://fom.in.ua/echo" method="GET">
+
+    <p>
+        <input type="radio" id="AllRadioType" name="RadioType" value="AllRadioType">
+            <label for="AllRadioType">Всі</label>
+        <input type="radio" id="buRadioType" name="RadioType" value="buRadioType">
+            <label for="buRadioType">Вживані</label>
+        <input type="radio" id="newRadioType" name="RadioType" value="newRadioType">
+            <label for="newRadioType">Нові</label>
+        <input type="radio" id="prRadioType" name="RadioType" value="prRadioType">
+            <label for="prRadioType">На пригон</label>
+    </p>
+    <p>
+        <label for="category"><strong>Тип транспорту:</strong></label>
+        <select id="category" aria-label="Тип транспорту" name="category">
+                <option value="0" selected="selected">Всі типи транспорту</option>
+                <option value="1">Легкові</option>
+                <option value="2">Мото</option>
+                <option value="3">Водний транспорт</option>
+                <option value="4">Спецтехніка</option>
+                <option value="5">Причепи</option>
+                <option value="6">Вантажівки</option>
+                <option value="7">Автобуси</option>
+                <option value="8">Автобудинки</option>
+                <option value="9">Повітряний транспорт</option>
+                <option value="10">Сільгосптехніка</option>          
+        </select>
+    </p>
+    <p><strong>Тип кузова:</strong></p>
+    <p>
+        <label for="checkbox_1">Універсал:</label>
+        <input type="checkbox" id="checkbox_1" name="checkbox_1">
+        <label for="checkbox_2">Седан:</label>
+        <input type="checkbox" id="checkbox_2" name="checkbox_2">
+        <label for="checkbox_3">Хетчбек:</label>
+        <input type="checkbox" id="checkbox_3" name="checkbox_3">
+        <label for="checkbox_4">Позашляховик/Кросовер:</label>
+        <input type="checkbox" id="checkbox_4" name="checkbox_4">
+        <label for="checkbox_5">Купе:</label>
+        <input type="checkbox" id="checkbox_5" name="checkbox_5">
+        <label for="checkbox_6">Кабріолет:</label>
+        <input type="checkbox" id="checkbox_6" name="checkbox_6">
+    </p>
+
+    <p>
+        <label for="at_country"><strong>Країна виробник:</strong></label>
+        <select id="at_country" aria-label="Країна виробник" name="at_country">
+            <option value="0" selected="selected">Оберіть країну</option>
+            <option value="276">Німеччина</option>
+            <option value="392">Японія</option>
+            <option value="250">Франція</option>
+            <option value="840">США</option>
+            <option value="408">Корея</option>
+            <option value="203">Чехія</option>
+            <option value="804">Україна</option>
+            <option value="380">Італія</option>
+            <option value="752">Швеція</option>
+            <option value="158">Китай</option>
+            <option value="40">Австрія</option>
+            <option value="826">Англія</option>
+            <option value="32">Аргентина</option>
+            <option value="56">Бельгія</option>
+            <option value="112">Білорусь</option>
+            <option value="100">Болгарія</option>
+            <option value="76">Бразилія</option>
+            <option value="900">Грузія</option>
+            <option value="208">Данія</option>
+            <option value="233">Естонія</option>
+            <option value="356">Індія</option>
+            <option value="364">Іран</option>
+            <option value="901">Ірландія</option>
+            <option value="903">Ісландія</option>
+            <option value="724">Іспанія</option>
+            <option value="380">Італія</option>
+            <option value="398">Казахстан</option>
+            <option value="124">Канада</option>
+            <option value="158">Китай</option>
+            <option value="408">Корея</option>
+            <option value="428">Латвія</option>
+            <option value="440">Литва</option>
+            <option value="442">Люксембург</option>
+            <option value="458">Малайзія</option>
+            <option value="498">Молдова</option>
+            <option value="528">Нідерланди</option>
+            <option value="276">Німеччина</option>
+            <option value="578">Норвегія</option>
+            <option value="902">ОАЕ</option>
+            <option value="616">Польша</option>
+            <option value="620">Португалiя</option>
+            <option value="643">Росія</option>
+            <option value="642">Румунія</option>
+            <option value="688">Сербія</option>
+            <option value="703">Словаччина</option>
+            <option value="705">Словенія</option>
+            <option value="840">США</option>
+            <option value="792">Туреччина</option>
+            <option value="348">Угорщина</option>
+            <option value="860">Узбекистан</option>
+            <option value="804">Україна</option>
+            <option value="246">Фінляндія</option>
+            <option value="250">Франція</option>
+            <option value="203">Чехія</option>
+            <option value="756">Швейцарія</option>
+            <option value="752">Швеція</option>
+            <option value="392">Японія</option>
+        </select>
+    </p>
+
+    <p>
+        <label for="price"><strong>Вартість:</strong></label>
+        <input type="number" id="price" name="price" placeholder="Від...">
+        <input type="number" id="price_2" name="price_2" placeholder="До...">
+        <select id="currency" aria-label="$" name="currency">
+            <option value="usd" selected="selected">USD</option>
+            <option value="eur">EUR</option>
+            <option value="uan">UAN</option>
+        </select>
+    <p>
+        <label for="year"><strong>Рік випуску:</strong></label>
+        <input type="number" id="year"" name="year" placeholder="Від...">
+        <input type="number" id="year_2" name="year_2" placeholder="До...">
+    </p>
+
+    <p><strong>Стан:</strong></p>
+    <p>
+        <label for="dtp">Участь у ДТП:</label>
+        <select id="dtp" aria-label="Участь у ДТП" name="dtp">
+            <option value="0" selected="selected">Не задано</option>
+            <option value="yes">Так</option>
+            <option value="no">Ні</option>
+        </select>    
+    </p>
+    <p>Технічний стан:</p>
+        <p>
+        <input type="checkbox" id="condition_1" name="condition_1">
+        <label for="condition_1">Повністю непошкоджене</label></p>
+        <p>
+        <input type="checkbox" id="condition_2" name="condition_2">
+        <label for="condition_2">Професійно відремонтоване пошкодження</label></p>
+        <p>
+        <input type="checkbox" id="condition_3" name="condition_3">
+        <label for="condition_3">Не відремонтоване пошкодження</label></p>
+        <p>
+        <input type="checkbox" id="condition_4" name="condition_4">
+        <label for="condition_4">Не на ходу/запчастини</label>
+    </p>
+
+    <p>У кредиті:</p>
+    <p>
+        <input type="radio" id="AllCredit" name="Credit" value="AllCredit">
+        <label for="AllCredit">Всі</label>
+        <input type="radio" id="yesCredit" name="Credit" value="yesCredit">
+        <label for="yesCredit">Так</label>
+        <input type="radio" id="noCredit" name="Credit" value="noCredit">
+        <label for="noCredit">Ні</label>
+    </p>
+
+    <p>
+        <label for="customs">Нерозмитнені:</label>
+        <select id="customs" aria-label="Нерозмитнені" name="customs">
+            <option value="0" selected="selected">Не задано</option>
+            <option value="yes">Так</option>
+            <option value="no">Ні</option>
+        </select>
+    </p>
+    <p><strong>Технічні характеристики:</strong></p>
+    <p>Тип палива:</p>
+    <p>
+        <input type="checkbox" id="fuel_1" name="fuel_1">
+        <label for="fuel_1">Бензин</label>
+    </p>
+    <p>
+        <input type="checkbox" id="fuel_2" name="fuel_2">
+        <label for="fuel_2">Дизель</label>
+    </p>
+    <p>
+        <input type="checkbox" id="fuel_3" name="fuel_3">
+        <label for="fuel_3">Газ</label>
+    </p>
+    <p>
+        <input type="checkbox" id="fuel_4" name="fuel_4">
+        <label for="fuel_4">Гібрит</label>
+    </p>
+    <p>
+        <input type="checkbox" id="fuel_5" name="fuel_5">
+        <label for="fuel_5">Електро</label>
+    </p>
+
+    <p>Тип КПП:</p>
+    <p>
+        <input type="checkbox" id="kpp_1" name="kppl_1">
+        <label for="kpp_1">Ручна/Механіка</label>
+    </p>
+    <p>
+        <input type="checkbox" id="kpp_2" name="kpp_2">
+        <label for="kpp_2">Автомат</label>
+    </p>
+    <p>
+        <input type="checkbox" id="kpp_3" name="kpp_3">
+        <label for="kpp_3">Типтронік</label>
+    </p>
+    <p>
+        <input type="checkbox" id="kpp_4" name="kpp_4">
+        <label for="kpp_4">Робот</label>
+    </p>
+    <p>
+        <input type="checkbox" id="kpp_5" name="kppl_5">
+        <label for="kpp_5">Варіатор</label>
+    </p>
+
+    <p>Колір:</p>
+    <label for="color">Оберіть приблизний колір авто:</label>
+    <input type="color" id="color" name="color" value="0">
+   
+    <p>Комфорт:</p>
+
+        <input type="checkbox" id="option-1" name="option-1"><label for="option-1">Наявність люку</label>
+        <input type="checkbox" id="option-2" name="option-2"><label for="option-2">Адаптивний круїз</label>
+        <input type="checkbox" id="option-3" name="option-3"><label for="option-3">Шкіряний салон</label>
+        <input type="checkbox" id="option-4" name="option-4"><label for="option-4">Бортовий комп'ютер</label>
+        <input type="checkbox" id="option-5" name="option-5"><label for="option-5">Відкриття багажника без
+                допомоги рук</label>
+        <input type="checkbox" id="option-6" name="option-6"><label for="option-6">Дистанційний запуск
+                двигуна</label>
+        <input type="checkbox" id="option-7" name="option-7"><label for="option-7">Доводчик дверей</label>
+        <input type="checkbox" id="option-8" name="option-8"><label for="option-8">Електронна приладова
+                панель</label>
+        <input type="checkbox" id="option-9" name="option-9"><label for="option-9">Електропривід
+                дзеркал</label>
+        <input type="checkbox" id="option-10" name="option-10"><label for="option-10">Електроскладання
+                дзеркал</label>
+        <input type="checkbox" id="option-11" name="option-11"><label for="option-11">Запуск двигуна з
+                кнопки</label>
+        <input type="checkbox" id="option-12" name="option-12"><label for="option-12">Обігрів лобового
+                скла</label>
+        <input type="checkbox" id="option-13" name="option-13"><label for="option-13">Обігрів рульового
+                колеса</label>
+        <input type="checkbox" id="option-14" name="option-14"><label for="option-14">Підігрів дзеркал</label>
+        <input type="checkbox" id="option-15" name="option-15"><label for="option-15">Пневмопідвіска</label>
+        <input type="checkbox" id="option-16" name="option-16"><label for="option-16">Проекційний
+                дисплей</label>
+        <input type="checkbox" id="option-17" name="option-17"><label for="option-17">Система доступу без
+                ключа</label>
+        <input type="checkbox" id="option-18" name="option-18"><label for="option-18">Система
+                «старт-стоп»</label>
+        <input type="checkbox" id="option-19" name="option-19"><label for="option-19">Холодильник</label></div>
+        <input type="checkbox" id="option-20" name="option-20"><label for="option-20">Швидка зарядка</label>
+    <p>
+        <button>Знайти авто</button>
+    </p>
+</form>
+
+</body>
+</html>
